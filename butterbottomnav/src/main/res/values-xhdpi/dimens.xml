@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="butter_bottom_nav_height">56dp</dimen>
+    <dimen name="butter_bottom_nav_item_size">24dp</dimen>
+    <dimen name="butter_bottom_nav_center_button_size">48dp</dimen>
+</resources>

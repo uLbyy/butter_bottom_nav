@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ButterBottomNavView">
+        <attr name="butter_bottom_nav_tab_one_selector" format="reference" />
+        <attr name="butter_bottom_nav_tab_two_selector" format="reference" />
+        <attr name="butter_bottom_nav_tab_three_selector" format="reference" />
+        <attr name="butter_bottom_nav_tab_four_selector" format="reference" />
+        <attr name="butter_bottom_nav_background" format="reference" />
+        <attr name="butter_bottom_nav_center_button_background" format="color|reference" />
+        <attr name="butter_bottom_nav_center_icon" format="reference" />
+    </declare-styleable>
+
+</resources>

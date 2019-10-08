@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.haslan.butterbottomnav.ButterBottomNavView
+        android:id="@+id/butter_bottom_nav"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:butter_bottom_nav_background="@color/colorPrimary"
+        app:butter_bottom_nav_center_button_background="@color/colorAccent"
+        app:butter_bottom_nav_center_icon="@drawable/ic_center"
+        app:butter_bottom_nav_tab_four_selector="@drawable/selector_tab_four"
+        app:butter_bottom_nav_tab_one_selector="@drawable/selector_tab_one"
+        app:butter_bottom_nav_tab_three_selector="@drawable/selector_tab_three"
+        app:butter_bottom_nav_tab_two_selector="@drawable/selector_tab_two"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

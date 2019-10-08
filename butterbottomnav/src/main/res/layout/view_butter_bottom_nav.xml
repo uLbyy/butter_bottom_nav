@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/layout_bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/butter_bottom_nav_height"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/layout_tab_one"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/check_tab_one"
+                android:layout_width="@dimen/butter_bottom_nav_item_size"
+                android:layout_height="@dimen/butter_bottom_nav_item_size"
+                android:layout_centerInParent="true"
+                android:button="@null"
+                android:clickable="false" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_tab_two"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/check_tab_two"
+                android:layout_width="@dimen/butter_bottom_nav_item_size"
+                android:layout_height="@dimen/butter_bottom_nav_item_size"
+                android:layout_centerInParent="true"
+                android:button="@null"
+                android:clickable="false" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_tab_center"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5">
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/image_button_center"
+                android:layout_width="@dimen/butter_bottom_nav_center_button_size"
+                android:layout_height="@dimen/butter_bottom_nav_center_button_size"
+                android:layout_centerInParent="true"
+                android:scaleType="center" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_tab_three"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/check_tab_three"
+                android:layout_width="@dimen/butter_bottom_nav_item_size"
+                android:layout_height="@dimen/butter_bottom_nav_item_size"
+                android:layout_centerInParent="true"
+                android:button="@null"
+                android:clickable="false" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_tab_four"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/check_tab_four"
+                android:layout_width="@dimen/butter_bottom_nav_item_size"
+                android:layout_height="@dimen/butter_bottom_nav_item_size"
+                android:layout_centerInParent="true"
+                android:button="@null"
+                android:clickable="false" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
+
