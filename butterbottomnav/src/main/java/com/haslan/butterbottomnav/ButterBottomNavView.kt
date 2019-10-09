@@ -9,7 +9,6 @@ import android.util.AttributeSet
 import android.view.View
 import android.widget.RelativeLayout
 import androidx.appcompat.widget.AppCompatCheckBox
-import androidx.core.content.ContextCompat
 import kotlinx.android.synthetic.main.view_butter_bottom_nav.view.*
 
 class ButterBottomNavView(context: Context, attrs: AttributeSet) : RelativeLayout(context, attrs) {
@@ -58,6 +57,10 @@ class ButterBottomNavView(context: Context, attrs: AttributeSet) : RelativeLayou
             }
         }
 
+        image_button_center.setOnClickListener {
+            centerTabClicked()
+        }
+
         val attributes: TypedArray =
             context.obtainStyledAttributes(attrs, R.styleable.ButterBottomNavView)
 
@@ -81,7 +84,7 @@ class ButterBottomNavView(context: Context, attrs: AttributeSet) : RelativeLayou
         val imageButtonBackground =
             attributes.getColor(
                 R.styleable.ButterBottomNavView_butter_bottom_nav_center_button_background,
-                Color.BLUE
+                Color.CYAN
             )
 
         check_tab_one.background = tabOneBackground
@@ -103,7 +106,7 @@ class ButterBottomNavView(context: Context, attrs: AttributeSet) : RelativeLayou
         attributes.recycle()
     }
 
-    public fun initListener(butterBottomNavListener: ButterBottomNavListener) {
+    fun initListener(butterBottomNavListener: ButterBottomNavListener) {
         this@ButterBottomNavView.butterBottomNavListener = butterBottomNavListener
     }
 
@@ -127,7 +130,11 @@ class ButterBottomNavView(context: Context, attrs: AttributeSet) : RelativeLayou
         butterBottomNavListener.sameTabClicked(tab)
     }
 
-    public fun tabPositionChanged(tab: Int) {
+    private fun centerTabClicked() {
+        butterBottomNavListener.centerTabClicked()
+    }
+
+    fun tabPositionChanged(tab: Int) {
         when (tab) {
             ButterBottomNavUtils.TAB_ONE -> {
                 tabSelected(check_tab_one, check_tab_two, check_tab_three, check_tab_four)

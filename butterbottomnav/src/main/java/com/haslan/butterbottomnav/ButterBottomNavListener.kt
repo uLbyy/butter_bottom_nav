@@ -5,4 +5,6 @@ interface ButterBottomNavListener {
     fun tabClicked(tab: Int)
 
     fun sameTabClicked(tab: Int)
+
+    fun centerTabClicked()
 }

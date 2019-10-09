@@ -22,4 +22,8 @@ class MainActivity : AppCompatActivity(), ButterBottomNavListener {
     override fun sameTabClicked(tab: Int) {
         Toast.makeText(this, "Same tab clicked", Toast.LENGTH_SHORT).show()
     }
+
+    override fun centerTabClicked() {
+        Toast.makeText(this, "Center tab clicked", Toast.LENGTH_SHORT).show()
+    }
 }
