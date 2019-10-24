@@ -17,7 +17,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:clickable="true"
-            android:focusable="true">
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground">
 
             <androidx.appcompat.widget.AppCompatCheckBox
                 android:id="@+id/check_tab_one"
@@ -35,7 +36,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:clickable="true"
-            android:focusable="true">
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground">
 
             <androidx.appcompat.widget.AppCompatCheckBox
                 android:id="@+id/check_tab_two"
@@ -68,7 +70,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:clickable="true"
-            android:focusable="true">
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground">
 
             <androidx.appcompat.widget.AppCompatCheckBox
                 android:id="@+id/check_tab_three"
@@ -86,7 +89,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:clickable="true"
-            android:focusable="true">
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground">
 
             <androidx.appcompat.widget.AppCompatCheckBox
                 android:id="@+id/check_tab_four"

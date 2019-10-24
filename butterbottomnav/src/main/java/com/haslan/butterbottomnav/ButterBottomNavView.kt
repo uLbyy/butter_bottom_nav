@@ -4,12 +4,17 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.content.res.TypedArray
 import android.graphics.Color
+import android.graphics.PorterDuff
+import android.graphics.PorterDuffColorFilter
 import android.graphics.drawable.GradientDrawable
 import android.util.AttributeSet
+import android.view.MotionEvent
 import android.view.View
+import android.view.animation.AnimationUtils
 import android.widget.RelativeLayout
 import androidx.appcompat.widget.AppCompatCheckBox
 import kotlinx.android.synthetic.main.view_butter_bottom_nav.view.*
+
 
 class ButterBottomNavView(context: Context, attrs: AttributeSet) : RelativeLayout(context, attrs) {
 
@@ -59,6 +64,23 @@ class ButterBottomNavView(context: Context, attrs: AttributeSet) : RelativeLayou
 
         image_button_center.setOnClickListener {
             centerTabClicked()
+        }
+
+        image_button_center.setOnTouchListener { v, event ->
+            when (event.action) {
+                MotionEvent.ACTION_DOWN -> {
+                    v.startAnimation(AnimationUtils.loadAnimation(context,R.anim.bounce))
+                    val porterDuffColorFilter = PorterDuffColorFilter(0x77000000, PorterDuff.Mode.SRC_ATOP)
+                    v.background.colorFilter = porterDuffColorFilter
+                    v.invalidate()
+                }
+                MotionEvent.ACTION_UP -> {
+                    v.startAnimation(AnimationUtils.loadAnimation(context,R.anim.bounce_reverse))
+                    v.background.clearColorFilter()
+                    v.invalidate()
+                }
+            }
+            false
         }
 
         val attributes: TypedArray =
