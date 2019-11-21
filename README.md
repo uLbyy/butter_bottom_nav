@@ -1,5 +1,5 @@
 # Butter-Bottom-Nav
-A simple bottom navigation library. Easy way to create a bottom navigation bar. There are four items on the bar and you can customize them as you like.
+A simple bottom navigation library. Easy way to create a bottom navigation bar. There are five items on the bar and you can customize them as you like.
 
 # Installation
 
@@ -40,8 +40,14 @@ Usage of the BottomNavigation widget is very easy. Just place it in your layout.
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
 ```
-You can arrange any colors or shapes for items by creating selector xml files in drawable folder. You can design your bottom navigation
-as you wish.
+You must specify selectors for each item in the layout. You can arrange any colors or shapes for items by creating selector xml files in drawable folder. You can design your bottom navigation as you wish. Below code is an example for tab one:
+
+```xml
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/ic_tab_one_selected" android:state_checked="true" />
+    <item android:drawable="@drawable/ic_tab_one" />
+</selector>
+```
 
 Activity that you use is extended by ButterBottomNavListener. In onCreate method ,you must call initListener method from navigation that 
 you defined in layout. tabClicked and centerTabClicled methods must be implemented to your activity. You can add action features to 
