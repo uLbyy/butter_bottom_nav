@@ -1,5 +1,5 @@
 # Butter-Bottom-Nav
-A simple bottom navigation library. Easy way to create a bottom navigation bar. There are five items on the bar and you can customize them as you like.
+A simple bottom navigation library. An easy way to create a bottom navigation bar. There are five items on the bar and you can customize them as you like.
 
 # Installation
 
