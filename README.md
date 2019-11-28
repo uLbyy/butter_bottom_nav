@@ -35,10 +35,7 @@ Usage of the BottomNavigation widget is very easy. Just place it in your layout.
         app:butter_bottom_nav_tab_four_selector="@drawable/selector_tab_four"
         app:butter_bottom_nav_tab_one_selector="@drawable/selector_tab_one"
         app:butter_bottom_nav_tab_three_selector="@drawable/selector_tab_three"
-        app:butter_bottom_nav_tab_two_selector="@drawable/selector_tab_two"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:butter_bottom_nav_tab_two_selector="@drawable/selector_tab_two" />
 ```
 You must specify selectors for each item in the layout. You can arrange any colors or shapes for items by creating selector xml files in drawable folder. You can design your bottom navigation as you wish. Below code is an example for tab one:
 
@@ -49,7 +46,7 @@ You must specify selectors for each item in the layout. You can arrange any colo
 </selector>
 ```
 
-Activity that you use is extended by ButterBottomNavListener. In onCreate method ,you must call initListener method from navigation that 
+Activity that you use is implemented by ButterBottomNavListener. In onCreate method ,you must call initListener method from navigation that 
 you defined in layout. tabClicked and centerTabClicled methods must be implemented to your activity. You can add action features to 
 items on bottom navigation when you click on them by using these methods. You should call tabPositionChanged method in tabClicked 
 method so the tab position will change when you click another item on navigation. Moreover, you should implement sameTabClicked method
