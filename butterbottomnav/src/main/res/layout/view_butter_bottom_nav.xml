@@ -22,8 +22,8 @@
 
             <androidx.appcompat.widget.AppCompatCheckBox
                 android:id="@+id/check_tab_one"
-                android:layout_width="@dimen/butter_bottom_nav_item_size"
-                android:layout_height="@dimen/butter_bottom_nav_item_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:button="@null"
                 android:clickable="false" />
@@ -41,8 +41,8 @@
 
             <androidx.appcompat.widget.AppCompatCheckBox
                 android:id="@+id/check_tab_two"
-                android:layout_width="@dimen/butter_bottom_nav_item_size"
-                android:layout_height="@dimen/butter_bottom_nav_item_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:button="@null"
                 android:clickable="false" />
@@ -75,8 +75,8 @@
 
             <androidx.appcompat.widget.AppCompatCheckBox
                 android:id="@+id/check_tab_three"
-                android:layout_width="@dimen/butter_bottom_nav_item_size"
-                android:layout_height="@dimen/butter_bottom_nav_item_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:button="@null"
                 android:clickable="false" />
@@ -94,8 +94,8 @@
 
             <androidx.appcompat.widget.AppCompatCheckBox
                 android:id="@+id/check_tab_four"
-                android:layout_width="@dimen/butter_bottom_nav_item_size"
-                android:layout_height="@dimen/butter_bottom_nav_item_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:button="@null"
                 android:clickable="false" />
