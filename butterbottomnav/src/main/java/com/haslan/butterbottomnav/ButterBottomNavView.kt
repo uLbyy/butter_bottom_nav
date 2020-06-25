@@ -12,7 +12,7 @@ import android.view.MotionEvent
 import android.view.View
 import android.view.animation.AnimationUtils
 import android.widget.RelativeLayout
-import androidx.appcompat.widget.AppCompatCheckBox
+import androidx.appcompat.widget.AppCompatImageButton
 import kotlinx.android.synthetic.main.view_butter_bottom_nav.view.*
 
 
@@ -26,8 +26,9 @@ class ButterBottomNavView(context: Context, attrs: AttributeSet) : RelativeLayou
         init(context, attrs)
     }
 
-    @SuppressLint("Recycle")
+    @SuppressLint("Recycle", "ClickableViewAccessibility")
     private fun init(context: Context, attrs: AttributeSet) {
+
         View.inflate(context, R.layout.view_butter_bottom_nav, this)
 
         layout_tab_one.setOnClickListener {
@@ -69,13 +70,14 @@ class ButterBottomNavView(context: Context, attrs: AttributeSet) : RelativeLayou
         image_button_center.setOnTouchListener { v, event ->
             when (event.action) {
                 MotionEvent.ACTION_DOWN -> {
-                    v.startAnimation(AnimationUtils.loadAnimation(context,R.anim.bounce))
-                    val porterDuffColorFilter = PorterDuffColorFilter(0x77000000, PorterDuff.Mode.SRC_ATOP)
+                    v.startAnimation(AnimationUtils.loadAnimation(context, R.anim.bounce))
+                    val porterDuffColorFilter =
+                        PorterDuffColorFilter(0x77000000, PorterDuff.Mode.SRC_ATOP)
                     v.background.colorFilter = porterDuffColorFilter
                     v.invalidate()
                 }
                 MotionEvent.ACTION_UP -> {
-                    v.startAnimation(AnimationUtils.loadAnimation(context,R.anim.bounce_reverse))
+                    v.startAnimation(AnimationUtils.loadAnimation(context, R.anim.bounce_reverse))
                     v.background.clearColorFilter()
                     v.invalidate()
                 }
@@ -103,22 +105,22 @@ class ButterBottomNavView(context: Context, attrs: AttributeSet) : RelativeLayou
                 R.styleable.ButterBottomNavView_butter_bottom_nav_center_icon,
                 ButterBottomNavUtils.UNDEFINED
             )
-        val imageButtonBackground =
+        val centerImageButtonBackground =
             attributes.getColor(
                 R.styleable.ButterBottomNavView_butter_bottom_nav_center_button_background,
                 Color.CYAN
             )
 
-        check_tab_one.background = tabOneBackground
-        check_tab_two.background = tabTwoBackground
-        check_tab_three.background = tabThreeBackground
-        check_tab_four.background = tabFourBackground
+        image_tab_one.background = tabOneBackground
+        image_tab_two.background = tabTwoBackground
+        image_tab_three.background = tabThreeBackground
+        image_tab_four.background = tabFourBackground
 
         layout_bottom_nav.background = bottomNavBackground
 
         val shape = GradientDrawable()
         shape.shape = GradientDrawable.OVAL
-        shape.setColor(imageButtonBackground)
+        shape.setColor(centerImageButtonBackground)
         image_button_center.background = shape
 
         if (centerIcon != ButterBottomNavUtils.UNDEFINED) {
@@ -159,31 +161,31 @@ class ButterBottomNavView(context: Context, attrs: AttributeSet) : RelativeLayou
     fun tabPositionChanged(tab: Int) {
         when (tab) {
             ButterBottomNavUtils.TAB_ONE -> {
-                tabSelected(check_tab_one, check_tab_two, check_tab_three, check_tab_four)
+                tabSelected(image_tab_one, image_tab_two, image_tab_three, image_tab_four)
                 selectedTab = ButterBottomNavUtils.TAB_ONE
             }
             ButterBottomNavUtils.TAB_TWO -> {
-                tabSelected(check_tab_two, check_tab_one, check_tab_three, check_tab_four)
+                tabSelected(image_tab_two, image_tab_one, image_tab_three, image_tab_four)
                 selectedTab = ButterBottomNavUtils.TAB_TWO
             }
             ButterBottomNavUtils.TAB_THREE -> {
-                tabSelected(check_tab_three, check_tab_two, check_tab_one, check_tab_four)
+                tabSelected(image_tab_three, image_tab_two, image_tab_one, image_tab_four)
                 selectedTab = ButterBottomNavUtils.TAB_THREE
             }
             ButterBottomNavUtils.TAB_FOUR -> {
-                tabSelected(check_tab_four, check_tab_two, check_tab_three, check_tab_one)
+                tabSelected(image_tab_four, image_tab_two, image_tab_three, image_tab_one)
                 selectedTab = ButterBottomNavUtils.TAB_FOUR
             }
         }
     }
 
     private fun tabSelected(
-        checkBoxTabOne: AppCompatCheckBox, checkBoxTabTwo: AppCompatCheckBox,
-        checkBoxTabThree: AppCompatCheckBox, checkBoxTabFour: AppCompatCheckBox
+        imageTabOne: AppCompatImageButton, imageTabTwo: AppCompatImageButton,
+        imageTabThree: AppCompatImageButton, imageTabFour: AppCompatImageButton
     ) {
-        checkBoxTabOne.isChecked = true
-        checkBoxTabTwo.isChecked = false
-        checkBoxTabThree.isChecked = false
-        checkBoxTabFour.isChecked = false
+        imageTabOne.isActivated = true
+        imageTabTwo.isActivated = false
+        imageTabThree.isActivated = false
+        imageTabFour.isActivated = false
     }
 }
