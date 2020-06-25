@@ -12,7 +12,7 @@ allprojects {
 }
 ```
   
-Add the dependency:
+Add the dependency: <a href="https://jitpack.io/#uLbyy/butter_bottom_nav"><img src="https://jitpack.io/v/uLbyy/butter_bottom_nav.svg" alt="jitpack"></a>
 
 ```groovy 
 dependencies {
